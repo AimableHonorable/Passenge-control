@@ -22,6 +22,7 @@ Rails 5.2.3
 * Edit user information
 * User management
     * activate or diactivate users
+* View profile
 * Change password
 * paginate
 
