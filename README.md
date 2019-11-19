@@ -12,6 +12,13 @@ security officers will be able to get the information of the citizen who enters 
 Ruby 2.6.3
 Rails 5.2.3
 
+## List of functions
+* User login
+* Register passenger
+* Create User
+    * Names, email, password
+
+
 ## Catalog design
 https://docs.google.com/spreadsheets/d/1B5p6MVjCDiKV6dTcEVakJ3ODGt1oC3LSey7TtVI0z3g/edit?usp=sharing
 
