@@ -21,6 +21,9 @@ https://docs.google.com/spreadsheets/d/1aLfd8cjdNh5M5_7uNSAhNMo1d09eb49oCZIc6d2-
 ## Entity relationship diagram
 https://drive.google.com/file/d/1GSIS0JoSC7wtYekrlod4A_euVsHbjZy5/view?usp=sharing
 
+## Screen transition
+https://drive.google.com/file/d/1tZzTRmlkbAuHvDicSJ99vZ4_Xqyneo5Q/view?usp=sharing
+
 ## Wireframe
 this is a slideshow
 https://docs.google.com/presentation/d/1tuj-HUzOAqQQg-jWmKYoq6nlTwW6btGNxDnY3XvtQSo/edit?usp=sharing
