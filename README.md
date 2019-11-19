@@ -12,5 +12,15 @@ security officers will be able to get the information of the citizen who enters 
 Ruby 2.6.3
 Rails 5.2.3
 
-## Function List
-:red_circle:
+## Catalog design
+https://docs.google.com/spreadsheets/d/1B5p6MVjCDiKV6dTcEVakJ3ODGt1oC3LSey7TtVI0z3g/edit?usp=sharing
+
+## Table definition
+https://docs.google.com/spreadsheets/d/1aLfd8cjdNh5M5_7uNSAhNMo1d09eb49oCZIc6d2-yfs/edit?usp=sharing
+
+## Entity relationship diagram
+https://drive.google.com/file/d/1GSIS0JoSC7wtYekrlod4A_euVsHbjZy5/view?usp=sharing
+
+#Wireframe
+this is a slideshow
+https://docs.google.com/presentation/d/1tuj-HUzOAqQQg-jWmKYoq6nlTwW6btGNxDnY3XvtQSo/edit?usp=sharing 
