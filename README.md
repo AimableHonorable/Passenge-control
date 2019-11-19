@@ -8,9 +8,9 @@ Current system of controlling passenger who cross border, every passenger has to
 my new system of using this application, all information will be saved in the database so that anytime at any instance the
 security officers will be able to get the information of the citizen who enters the country, and get that information easily without going through papers."						
 
-##Versions
+## Versions
 Ruby 2.6.3
 Rails 5.2.3
 
-##Function List
+## Function List
 :red_circle:
