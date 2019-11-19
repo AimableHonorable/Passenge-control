@@ -15,9 +15,15 @@ Rails 5.2.3
 ## List of functions
 * User login
 * Register passenger
+    * Names, email, phone, reference information
+* Search passengers
 * Create User
     * Names, email, password
-
+* Edit user information
+* User management
+    * activate or diactivate users
+* Change password
+* paginate
 
 ## Catalog design
 https://docs.google.com/spreadsheets/d/1B5p6MVjCDiKV6dTcEVakJ3ODGt1oC3LSey7TtVI0z3g/edit?usp=sharing
@@ -34,3 +40,9 @@ https://drive.google.com/file/d/1tZzTRmlkbAuHvDicSJ99vZ4_Xqyneo5Q/view?usp=shari
 ## Wireframe
 this is a slideshow
 https://docs.google.com/presentation/d/1tuj-HUzOAqQQg-jWmKYoq6nlTwW6btGNxDnY3XvtQSo/edit?usp=sharing
+
+## Used gems
+* Devise
+* Ransack
+* Kaminari
+* Rails admin
