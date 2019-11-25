@@ -1,0 +1,7 @@
+<h4>List of passengers</h4>
+<button>
+  <%= link_to 'register passenger', new_passenger_path %>
+</button>
+<% @passengers.each do |passenger| %>
+  <%= passenger.first_name %>
+<% end %>

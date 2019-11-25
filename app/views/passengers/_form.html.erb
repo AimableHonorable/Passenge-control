@@ -1,0 +1,37 @@
+<%= form_with(model: @passenger, local: true) do |form| %>
+
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name%>
+
+  <%= form.label :last_name %>
+  <%= form.text_field :last_name%>
+
+  <%= form.label :email %>
+  <%= form.text_field :email%>
+
+  <%= form.label :phone %>
+  <%= form.text_field :phone%>
+
+  <%= form.label :id_number %>
+  <%= form.text_field :idnumber%>
+
+  <%= form.label :destination %>
+  <%= form.text_field :destination%>
+
+  <%= form.label :ref_first_name %>
+  <%= form.text_field :ref_first_name%>
+
+  <%= form.label :ref_last_name %>
+  <%= form.text_field :ref_last_name%>
+
+  <%= form.label :ref_phone_number %>
+  <%= form.text_field :ref_phone_number%>
+
+  <%= form.label :entry_on %>
+  <%= form.date_field :entry_on%>
+
+  <%= form.label :return_on %>
+  <%= form.date_field :return_on%>
+
+  <%= form.submit 'Save' %>
+<% end %>
