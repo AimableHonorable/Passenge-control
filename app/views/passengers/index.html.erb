@@ -2,6 +2,36 @@
 <button>
   <%= link_to 'register passenger', new_passenger_path %>
 </button>
-<% @passengers.each do |passenger| %>
-  <%= passenger.first_name %>
-<% end %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Phone number</th>
+        <th>ID number</th>
+        <th>Destination</th>
+        <th>Ref first name</th>
+        <th>Ref last name</th>
+        <th>Ref Phone number</th>
+        <th>Entry date</th>
+        <th>Return date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @passengers.each do |passenger| %>
+        <tr>
+          <td><%= passenger.first_name %></td>
+          <td><%= passenger.last_name %></td>
+          <td><%= passenger.phone %></td>
+          <td><%= passenger.id_number %></td>
+          <td><%= passenger.destination %></td>
+          <td><%= passenger.ref_first_name %></td>
+          <td><%= passenger.ref_last_name %></td>
+          <td><%= passenger.ref_phone_number %></td>
+          <td><%= passenger.entry_on %></td>
+          <td><%= passenger.return_on %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
