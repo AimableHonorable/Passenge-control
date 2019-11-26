@@ -2,6 +2,16 @@
 
 
 <%= form_with(model: @passenger, local: true) do |form| %>
+<% if @passenger.errors.any? %>
+   <div id="error_explanation" class="alert alert-danger" role="alert">
+     <h2><%= @passenger.errors.count %>errors occurred.</h2>
+     <ul>
+     <% @passenger.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
   <div class="my-2">
     <div class="register text-center border rounded my-2 shadow">
       <h4>Passenger information</h4>

@@ -1,5 +1,5 @@
 class PassengersController < ApplicationController
-  before_action :set_passenger
+  before_action :set_passenger, only: [:show, :edit, :update]
    before_action :authenticate_user!
   def index
     @search = Passenger.ransack(params[:q])
@@ -14,7 +14,7 @@ class PassengersController < ApplicationController
     @passenger = Passenger.new
   end
   def create
-    @passenger = Passenger.new(passenger_params)
+    @passenger = current_user.passengers.build(passenger_params)
     if @passenger.save
       redirect_to passengers_path, notice: 'new passenger registered'
     else
