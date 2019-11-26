@@ -1,11 +1,12 @@
 class PassengersController < ApplicationController
+  before_action :set_passenger
    before_action :authenticate_user!
   def index
     @search = Passenger.ransack(params[:q])
     if params[:q]
-      @passengers = @search.result
+      @passengers = @search.result.page params[:page]
     else
-      @passengers = Passenger.all
+      @passengers = Passenger.all.order('created_at desc').page params[:page]
     end
 
   end
@@ -20,8 +21,19 @@ class PassengersController < ApplicationController
       render:new
     end
   end
+  def edit
+
+  end
+  def update
+    if @passenger.update
+      redirect_to passengers_path, notice: 'passenger information updated!'
+    end
+  end
 
   private
+  def set_passenger
+    @passenger = Passenger.find(params[:id])
+  end
 
   def passenger_params
     params.require(:passenger).permit(:first_name, :last_name, :email, :phone, :id_number, :destination, :ref_first_name, :ref_last_name, :ref_phone_number, :entry_on, :return_on)

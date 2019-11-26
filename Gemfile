@@ -40,6 +40,7 @@ gem 'devise'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
 gem 'ransack'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
