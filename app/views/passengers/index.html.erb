@@ -1,7 +1,16 @@
 
-<h4 class="my-4 text-center text-info">List of passengers</h4>
 
-  <table class="table table-striped">
+<div class="w-25 ml-auto">
+  <%= search_form_for @search do |f| %>
+    <%= f.label :first_name_cont, "Search passenger"%>
+    <div class="form-inline">
+    <%= f.search_field :first_name_cont, class: "form-control mr-sm-2 sm" %>
+    <%= f.submit class:"btn btn-info btn-sm my-2 my-sm-0" %>
+    </div>
+  <% end %>
+</div>
+<h4 class="my-4 text-center text-info">List of passengers</h4>
+  <table class="table table-striped shadow">
     <thead class="thead-light">
       <tr>
         <th scope="col">First name</th>

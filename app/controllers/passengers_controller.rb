@@ -1,7 +1,13 @@
 class PassengersController < ApplicationController
    before_action :authenticate_user!
   def index
-    @passengers = Passenger.all
+    @search = Passenger.ransack(params[:q])
+    if params[:q]
+      @passengers = @search.result
+    else
+      @passengers = Passenger.all
+    end
+
   end
   def new
     @passenger = Passenger.new
