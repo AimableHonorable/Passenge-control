@@ -4,7 +4,7 @@ FactoryBot.define do
     last_name { "MyString" }
     email { "MyString" }
     phone { 1 }
-    id_nuber { 1 }
+    id_number { 1 }
     destination { "MyString" }
     ref_first_name { "MyString" }
     ref_last_name { "MyString" }
