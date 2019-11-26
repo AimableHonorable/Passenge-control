@@ -1,37 +1,120 @@
+<div class="container m-auto">
+
+
 <%= form_with(model: @passenger, local: true) do |form| %>
+  <div class="my-2">
+    <div class="register text-center border rounded my-2 shadow">
+      <h4>Passenger information</h4>
+      <div class="row py-2">
+        <div class="col">
+          <div class="form-group">
+            <%= form.label :first_name%>
+            <%= form.text_field :first_name, class: "form-control w-75 m-auto"%>
+          </div>
 
-  <%= form.label :first_name %>
-  <%= form.text_field :first_name%>
+          <div class="form-group">
+            <%= form.label :last_name %>
+            <%= form.text_field :last_name, class: "form-control w-75 m-auto"%>
+          </div>
 
-  <%= form.label :last_name %>
-  <%= form.text_field :last_name%>
+          <div class="form-group">
+            <%= form.label :email %>
+            <%= form.text_field :email, class: "form-control w-75 m-auto"%>
+          </div>
 
-  <%= form.label :email %>
-  <%= form.text_field :email%>
 
-  <%= form.label :phone %>
-  <%= form.text_field :phone%>
+        </div>
+        <div class="col text-center">
+          <div class="form-group">
+            <%= form.label :email %>
+            <%= form.text_field :email, class: "form-control w-75 m-auto"%>
+          </div>
 
-  <%= form.label :id_number %>
-  <%= form.text_field :id_number%>
+          <div class="form-group">
+            <%= form.label :phone %>
+            <%= form.text_field :phone, class: "form-control w-75 m-auto"%>
+          </div>
 
-  <%= form.label :destination %>
-  <%= form.text_field :destination%>
+          <div class="form-group">
+            <%= form.label :id_number %>
+            <%= form.text_field :id_number, class: "form-control w-75 m-auto"%>
+          </div>
 
-  <%= form.label :ref_first_name %>
-  <%= form.text_field :ref_first_name%>
+        </div>
+      </div>
+    </div>
 
-  <%= form.label :ref_last_name %>
-  <%= form.text_field :ref_last_name%>
+    <div class="register text-center border rounded my-2 shadow">
+      <h4>Reference information</h4>
+      <div class="row py-2">
+        <div class="col">
+          <div class="form-group">
+            <%= form.label :ref_first_name %>
+            <%= form.text_field :ref_first_name, class: "form-control w-75 m-auto"%>
+          </div>
 
-  <%= form.label :ref_phone_number %>
-  <%= form.text_field :ref_phone_number%>
+          <div class="form-group">
+            <%= form.label :ref_last_name %>
+            <%= form.text_field :ref_last_name, class: "form-control w-75 m-auto"%>
+          </div>
 
-  <%= form.label :entry_on %>
-  <%= form.date_field :entry_on%>
+        </div>
+        <div class="col text-center">
+          <div class="form-group">
+            <%= form.label :destination %>
+            <%= form.select :destination, [ 'Gasabo',
+                                            'Kicukiro',
+                                            'Nyarugenge',
+                                            'Gicumbi',
+                                            'Gakenke',
+                                            'Rurindo',
+                                            'Musanze',
+                                            'Burera',
+                                            'Rubavu',
+                                            'Nyabihu',
+                                            'Ngororero',
+                                            'Nyamasheke',
+                                            'Nyamagabe',
+                                            'Rusizi',
+                                            'Nyaruguru',
+                                            'Gisagara',
+                                            'Huye',
+                                            'Nyanza',
+                                            'Ruhango',
+                                            'Muhanga',
+                                            'Kamonyi',
+                                            'Bugesera',
+                                            'Ngoma',
+                                            'Kirehe',
+                                            'Kayonza',
+                                            'Rwamagana',
+                                            'Gatsibo',
+                                            'Nyagatare'], :prompt=>"Select district", class: "form-control w-75 m-auto"%>
+          </div>
 
-  <%= form.label :return_on %>
-  <%= form.date_field :return_on%>
+          <div class="form-group">
+            <%= form.label :ref_phone_number %>
+            <%= form.text_field :ref_phone_number, class: "form-control w-75 m-auto"%>
+          </div>
 
-  <%= form.submit 'Save' %>
+        </div>
+      </div>
+    </div>
+    <div class="row text-light text-center">
+      <div class="col">
+        <%= form.label :entry_on %>
+        <%= form.date_field :entry_on, class: "form-control w-75 m-auto"%>
+      </div>
+      <div class="col">
+        <%= form.label :return_on %>
+        <%= form.date_field :return_on, class: "form-control w-75 m-auto"%>
+      </div>
+    </div>
+    <div class="row text-center my-4">
+      <%= form.submit 'Save', class: "form-control w-25 m-auto my-4 btn-info btn-sm rounded-pill shadow" %>
+    </div>
+
+  </div>
+
 <% end %>
+</div>

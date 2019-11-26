@@ -1,0 +1,34 @@
+body{
+  background-image: linear-gradient(#f2f7f7, #006666);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  font-family: verdana;
+}
+.title{
+  font-size: 70px;
+  font-family: verdana;
+}
+a:hover{
+  text-decoration: none;
+}
+.navbar-brand img{
+  width: 80px;
+}
+#navbarNav li a{
+  color: #008585;
+}
+#navbarNav h5{
+  color: #006969;
+}
+.register{
+  background-image: linear-gradient(#f2f7f7,#8cbaba);
+}
+.register a{
+  color: #008585;
+}
+.register a:hover{
+  text-decoration: none;
+  color: #001f1f;
+  font-size: 16px;
+}
