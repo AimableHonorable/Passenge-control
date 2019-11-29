@@ -3,7 +3,7 @@ class Passenger < ApplicationRecord
   belongs_to :user
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :email, presence: true, length: { maximum: 255 }, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
+  validates :email, length: { maximum: 255 }, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   validates :phone, presence: true, length: {:minimum => 10, :maximum => 10 }
   validates :id_number, presence: true, length: {:minimum => 16, :maximum => 16 }
   validates :ref_first_name, presence: true
