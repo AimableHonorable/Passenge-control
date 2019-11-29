@@ -23,8 +23,8 @@ RSpec.feature "Passenger management", type: :feature do
                                   ref_last_name: 'Mary',
                                   ref_phone_number: '0756675656',
                                   destination: 'Nyarugenge',
-                                  entry_on: '2019-11-26',
-                                  return_on: '2019-11-30',
+                                  entry_on: '2019-12-12',
+                                  return_on: '2019-12-30',
                                   user_id: @user.id
                                   )
     FactoryBot.create(:passenger, first_name: 'Favor',
@@ -36,8 +36,8 @@ RSpec.feature "Passenger management", type: :feature do
                                   ref_last_name: 'Mary',
                                   ref_phone_number: '0756675656',
                                   destination: 'Nyarugenge',
-                                  entry_on: '2019-11-26',
-                                  return_on: '2019-11-30',
+                                  entry_on: '2019-12-12',
+                                  return_on: '2019-12-30',
                                   user_id: @user.id
                                   )
 
@@ -54,8 +54,8 @@ end
     fill_in 'Ref last name', with: 'Aima'
     fill_in 'Ref phone number', with: '0782345667'
     select 'Nyarugenge'
-    fill_in 'Entry on', with: '2019-11-26'
-    fill_in 'Return on', with: '2019-11-30'
+    fill_in 'Entry on', with: '2019-12-12'
+    fill_in 'Return on', with: '2019-12-30'
     click_button 'Save'
     expect(page).to have_content 'Felix'
   end
