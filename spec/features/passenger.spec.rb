@@ -140,7 +140,7 @@ end
   scenario "Test search passenger" do
     visit passengers_path
     fill_in 'Search passenger', with:'Favor'
-    click_button 'Search'
+    click_button '検索'
     expect(page).to have_content 'Favor'
   end
   scenario "Test pagination" do
