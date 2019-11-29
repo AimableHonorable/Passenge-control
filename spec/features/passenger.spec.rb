@@ -40,6 +40,84 @@ RSpec.feature "Passenger management", type: :feature do
                                   return_on: '2019-12-30',
                                   user_id: @user.id
                                   )
+    FactoryBot.create(:passenger, first_name: 'Ange',
+                                  last_name: 'Mary',
+                                  email: 'ange@gmail.com',
+                                  phone: '0788908978',
+                                  id_number: '1998000088990909',
+                                  ref_first_name: 'Honorine',
+                                  ref_last_name: 'Mary',
+                                  ref_phone_number: '0756675656',
+                                  destination: 'Nyarugenge',
+                                  entry_on: '2019-12-12',
+                                  return_on: '2019-12-30',
+                                  user_id: @user.id
+                                  )
+    FactoryBot.create(:passenger, first_name: 'Favor',
+                                  last_name: 'Mwiza',
+                                  email: 'favor@gmail.com',
+                                  phone: '0788908978',
+                                  id_number: '1998880088990909',
+                                  ref_first_name: 'Honorine',
+                                  ref_last_name: 'Mary',
+                                  ref_phone_number: '0756675656',
+                                  destination: 'Nyarugenge',
+                                  entry_on: '2019-12-12',
+                                  return_on: '2019-12-30',
+                                  user_id: @user.id
+                                  )
+    FactoryBot.create(:passenger, first_name: 'Ange',
+                                  last_name: 'Mary',
+                                  email: 'ange@gmail.com',
+                                  phone: '0788908978',
+                                  id_number: '1998000088990909',
+                                  ref_first_name: 'Honorine',
+                                  ref_last_name: 'Mary',
+                                  ref_phone_number: '0756675656',
+                                  destination: 'Nyarugenge',
+                                  entry_on: '2019-12-12',
+                                  return_on: '2019-12-30',
+                                  user_id: @user.id
+                                  )
+    FactoryBot.create(:passenger, first_name: 'Favor',
+                                  last_name: 'Mwiza',
+                                  email: 'favor@gmail.com',
+                                  phone: '0788908978',
+                                  id_number: '1998880088990909',
+                                  ref_first_name: 'Honorine',
+                                  ref_last_name: 'Mary',
+                                  ref_phone_number: '0756675656',
+                                  destination: 'Nyarugenge',
+                                  entry_on: '2019-12-12',
+                                  return_on: '2019-12-30',
+                                  user_id: @user.id
+                                  )
+    FactoryBot.create(:passenger, first_name: 'Ange',
+                                  last_name: 'Mary',
+                                  email: 'ange@gmail.com',
+                                  phone: '0788908978',
+                                  id_number: '1998000088990909',
+                                  ref_first_name: 'Honorine',
+                                  ref_last_name: 'Mary',
+                                  ref_phone_number: '0756675656',
+                                  destination: 'Nyarugenge',
+                                  entry_on: '2019-12-12',
+                                  return_on: '2019-12-30',
+                                  user_id: @user.id
+                                  )
+    FactoryBot.create(:passenger, first_name: 'Favor',
+                                  last_name: 'Mwiza',
+                                  email: 'favor@gmail.com',
+                                  phone: '0788908978',
+                                  id_number: '1998880088990909',
+                                  ref_first_name: 'Honorine',
+                                  ref_last_name: 'Mary',
+                                  ref_phone_number: '0756675656',
+                                  destination: 'Nyarugenge',
+                                  entry_on: '2019-12-12',
+                                  return_on: '2019-12-30',
+                                  user_id: @user.id
+                                  )
 
 end
   scenario "Test if we can register passenger" do
@@ -64,5 +142,9 @@ end
     fill_in 'Search passenger', with:'Favor'
     click_button 'Search'
     expect(page).to have_content 'Favor'
+  end
+  scenario "Test pagination" do
+    visit passengers_path
+    expect(page).to have_xpath("//*[@class='pagination']//a[text()='2']")
   end
 end
