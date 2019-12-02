@@ -25,6 +25,7 @@
         <th scope="col">Ref Phone number</th>
         <th scope="col">Entry date</th>
         <th scope="col">Return date</th>
+        <th scope="col">Status</th>
       </tr>
     </thead>
     <tbody>
@@ -40,6 +41,14 @@
           <td><%= passenger.ref_phone_number %></td>
           <td><%= passenger.entry_on %></td>
           <td><%= passenger.return_on %></td>
+          <td>
+            <% if passenger.status == true %>
+              <%= link_to "Returned", passenger_path(passenger, :status => false),method: :patch ,class: 'btn btn-sm btn-success' %>
+            <% end %>
+            <% if passenger.status == false %>
+              <%= link_to "Not_returned", passenger_path(passenger, :status => true),method: :patch ,class: 'btn btn-sm btn-danger' %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>

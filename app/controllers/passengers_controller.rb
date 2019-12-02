@@ -25,7 +25,10 @@ class PassengersController < ApplicationController
 
   end
   def update
-    if @passenger.update
+    if params[:status]
+      @passenger.update(status: params[:status])
+      redirect_to passengers_path
+    elsif @passenger.update
       redirect_to passengers_path, notice: 'passenger information updated!'
     end
   end
