@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_many :passengers
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   #deactivate user instead of deleting
   def destroy
     update_attributes(deactivated: true) unless deactivated

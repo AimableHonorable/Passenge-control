@@ -25,8 +25,8 @@ RSpec.feature "User management", type: :feature do
     click_link 'Forgot your password?'
     fill_in 'Email', with: 'aimable@gmail.com'
     click_button 'Send me reset password instructions'
-    expect(page).to have_content 'You will receive an email with instructions on how to reset your password in a few minutes.'
-    # visit letters 
+    expect(page).to have_content 'パスワード再発行の方法が記載されたメールが間もなく送信されます。'
+    # visit letters
     # visit edit_user_password_path
     # save_and_open_page
     # fill_in 'Password', with: 'password'
