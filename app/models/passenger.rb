@@ -7,6 +7,7 @@ class Passenger < ApplicationRecord
   validates :phone, presence: true, length: {:minimum => 10, :maximum => 10 }
   validates :id_number, presence: true, length: {:minimum => 16, :maximum => 16 }
   validates :ref_first_name, presence: true
+  validates :destination, presence: true
   validates :ref_last_name, presence: true
   validates :ref_phone_number, presence: true, length: {:minimum => 10, :maximum => 10 }
   validates :entry_on, presence: true
